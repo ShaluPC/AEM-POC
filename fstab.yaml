@@ -19,6 +19,6 @@ mountpoints:
 
 
   /:
-    url: "https://author-p134652-e1338859.adobeaemcloud.com/bin/franklin.delivery/ShaluPC/AEM-POC/edit/main"
+    url: "https://author-p134652-e1338859.adobeaemcloud.com/bin/franklin.delivery/ShaluPC/AEM-POC/main"
     type: "markup"
     suffix: ".html"
