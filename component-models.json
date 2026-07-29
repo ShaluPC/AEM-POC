@@ -1,207 +1,218 @@
-{
-  "id": "aem-poc-site",
-  "version": "1.0.0",
-  "groups": [
-    {
-      "id": "content",
-      "title": "Content"
-    },
-    {
-      "id": "media",
-      "title": "Media"
-    }
-  ],
-  "models": [
-    {
-      "id": "hero",
-      "title": "Hero Block",
-      "description": "Main hero section with title, description, and background image",
-      "icon": "imageCard",
-      "group": "content",
-      "fields": [
-        {
-          "component": "text",
-          "name": "title",
-          "label": "Title",
-          "description": "Hero section title",
-          "value": ""
-        },
-        {
-          "component": "textarea",
-          "name": "description",
-          "label": "Description",
-          "description": "Hero section subtitle or description",
-          "value": ""
-        },
-        {
-          "component": "reference",
-          "name": "image",
-          "label": "Background Image",
-          "description": "Hero background image",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "name": "cta",
-          "label": "Call to Action Text",
-          "description": "Button text for call to action",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "id": "text",
-      "title": "Text Block",
-      "description": "Simple rich text content block",
-      "icon": "document",
-      "group": "content",
-      "fields": [
-        {
-          "component": "richtext",
-          "name": "text",
-          "label": "Content",
-          "description": "Rich text content",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "id": "cards",
-      "title": "Cards Block",
-      "description": "Display multiple cards with images, titles, and descriptions",
-      "icon": "imageCard",
-      "group": "content",
-      "fields": [
-        {
-          "component": "text",
-          "name": "title",
-          "label": "Section Title",
-          "description": "Title for the cards section",
-          "value": ""
-        },
-        {
-          "component": "multifield",
-          "name": "cards",
-          "label": "Cards",
-          "description": "Add multiple cards",
-          "fields": [
-            {
-              "component": "reference",
-              "name": "image",
-              "label": "Card Image"
-            },
-            {
-              "component": "text",
-              "name": "cardTitle",
-              "label": "Card Title"
-            },
-            {
-              "component": "textarea",
-              "name": "cardDescription",
-              "label": "Card Description"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "teaser",
-      "title": "Teaser Block",
-      "description": "Teaser with image and text content",
-      "icon": "imageCard",
-      "group": "content",
-      "fields": [
-        {
-          "component": "reference",
-          "name": "image",
-          "label": "Teaser Image",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "name": "title",
-          "label": "Title",
-          "value": ""
-        },
-        {
-          "component": "richtext",
-          "name": "description",
-          "label": "Description",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "name": "link",
-          "label": "Link URL",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "id": "button",
-      "title": "Button",
-      "description": "Call to action button",
-      "icon": "button",
-      "group": "content",
-      "fields": [
-        {
-          "component": "text",
-          "name": "text",
-          "label": "Button Text",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "name": "link",
-          "label": "Link URL",
-          "value": ""
-        },
-        {
-          "component": "select",
-          "name": "style",
-          "label": "Button Style",
-          "value": "primary",
-          "valueType": "string",
-          "options": [
-            {
-              "name": "Primary",
-              "value": "primary"
-            },
-            {
-              "name": "Secondary",
-              "value": "secondary"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "image",
-      "title": "Image Block",
-      "description": "Display a single image with optional caption",
-      "icon": "image",
-      "group": "media",
-      "fields": [
-        {
-          "component": "reference",
-          "name": "image",
-          "label": "Image",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "name": "alt",
-          "label": "Alt Text",
-          "description": "Accessibility alt text",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "name": "caption",
-          "label": "Caption",
-          "value": ""
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "keywords",
+        "multi": true,
+        "label": "Keywords"
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "title",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Section Name",
+        "description": "The label shown for this section in the Content Tree"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  }
+]
