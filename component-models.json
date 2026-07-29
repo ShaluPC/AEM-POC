@@ -1,0 +1,207 @@
+{
+  "id": "aem-poc-site",
+  "version": "1.0.0",
+  "groups": [
+    {
+      "id": "content",
+      "title": "Content"
+    },
+    {
+      "id": "media",
+      "title": "Media"
+    }
+  ],
+  "models": [
+    {
+      "id": "hero",
+      "title": "Hero Block",
+      "description": "Main hero section with title, description, and background image",
+      "icon": "imageCard",
+      "group": "content",
+      "fields": [
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "description": "Hero section title",
+          "value": ""
+        },
+        {
+          "component": "textarea",
+          "name": "description",
+          "label": "Description",
+          "description": "Hero section subtitle or description",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Background Image",
+          "description": "Hero background image",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "cta",
+          "label": "Call to Action Text",
+          "description": "Button text for call to action",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "text",
+      "title": "Text Block",
+      "description": "Simple rich text content block",
+      "icon": "document",
+      "group": "content",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "text",
+          "label": "Content",
+          "description": "Rich text content",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "title": "Cards Block",
+      "description": "Display multiple cards with images, titles, and descriptions",
+      "icon": "imageCard",
+      "group": "content",
+      "fields": [
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Section Title",
+          "description": "Title for the cards section",
+          "value": ""
+        },
+        {
+          "component": "multifield",
+          "name": "cards",
+          "label": "Cards",
+          "description": "Add multiple cards",
+          "fields": [
+            {
+              "component": "reference",
+              "name": "image",
+              "label": "Card Image"
+            },
+            {
+              "component": "text",
+              "name": "cardTitle",
+              "label": "Card Title"
+            },
+            {
+              "component": "textarea",
+              "name": "cardDescription",
+              "label": "Card Description"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teaser",
+      "title": "Teaser Block",
+      "description": "Teaser with image and text content",
+      "icon": "imageCard",
+      "group": "content",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Teaser Image",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "description",
+          "label": "Description",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "link",
+          "label": "Link URL",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "description": "Call to action button",
+      "icon": "button",
+      "group": "content",
+      "fields": [
+        {
+          "component": "text",
+          "name": "text",
+          "label": "Button Text",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "link",
+          "label": "Link URL",
+          "value": ""
+        },
+        {
+          "component": "select",
+          "name": "style",
+          "label": "Button Style",
+          "value": "primary",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Primary",
+              "value": "primary"
+            },
+            {
+              "name": "Secondary",
+              "value": "secondary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "title": "Image Block",
+      "description": "Display a single image with optional caption",
+      "icon": "image",
+      "group": "media",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Image",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "alt",
+          "label": "Alt Text",
+          "description": "Accessibility alt text",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "caption",
+          "label": "Caption",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

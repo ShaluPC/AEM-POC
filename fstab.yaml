@@ -1,0 +1,18 @@
+# File System Table (fstab) for AEM Edge Delivery Services
+# This configuration maps mountpoints to content sources
+# Documentation: https://www.aem.live/docs/fstab
+
+mountpoints:
+  # Main content source - Configure with your Google Drive folder ID or content source
+  # Example for Google Drive: https://drive.google.com/drive/folders/YOUR_FOLDER_ID
+  # Example for GitHub: https://raw.githubusercontent.com/owner/repo/main/
+  # Example for SharePoint: https://sharepoint.com/sites/yoursite/Shared%20Documents/
+  /: https://drive.google.com/drive/folders/1K6YXamTmNQ7VmLqaEHD6qOj6pv38Oxk1
+
+  # Optional: Asset management
+  # /assets: https://your-asset-source.com/
+
+# Proxy rules (optional) - For connecting to external APIs or services
+# proxies:
+#   /api:
+#     url: https://api.example.com
